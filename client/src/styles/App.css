@@ -1,0 +1,633 @@
+/* client/src/styles/App.css */
+/* ====================================================================
+   Global Styles Start
+   ==================================================================== */
+   body {
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    margin: 20px;
+    color: #333;
+  }
+  
+  .app-container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  /* ====================================================================
+     Global Styles End
+     ==================================================================== */
+  
+
+  /* ====================================================================
+     Navigation Styles Start
+     ==================================================================== */
+  nav {
+    margin-bottom: 20px;
+  }
+  
+  nav a {
+    color: white;                        /* White text */
+    background-color: #436936;           /* #007bff */
+    font-size: 18px;      
+    font-weight: bold;               /* Larger text for buttons */
+    padding: 10px 20px;                  /* Extra padding for a button feel */
+    border: none;                        /* No border */
+    border-radius: 5px;                  /* Rounded corners */
+    text-decoration: none;               /* Remove underline */
+    display: inline-block;               /* Allows padding & margin to work */
+    margin-right: 10px;                  /* Spacing between buttons */
+    transition: background-color 0.2s;   /* Smooth transition on hover */
+  }
+  
+  /* Hover state: slightly darker blue */
+  nav a:hover {
+    background-color: #2b4625;
+  }
+  
+  /* Active state: when the page is selected #009443 */
+  nav a.active {
+    background-color: #b39557;
+    color: black; 
+    font-weight: bold;                            /* White text */
+  }
+  
+  /* ====================================================================
+     Navigation Styles End
+     ==================================================================== */
+  
+  
+  /* ====================================================================
+     Headings Styles Start
+     ==================================================================== */
+  h1, h2 {
+    font-size: 2em;
+  }
+  /* ====================================================================
+     Headings Styles End
+     ==================================================================== */
+  
+  
+  /* ====================================================================
+     Homepage Styles Start
+     ==================================================================== */
+  .homepage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    text-align: center;
+    background-color: #f9f9f9;
+  }
+  
+  .homepage h1 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 1rem;
+  }
+  
+  .homepage p {
+    font-size: 1.2rem;
+    color: #555;
+    line-height: 1.6;
+    max-width: 600px;
+  }
+  /* ====================================================================
+     Homepage Styles End
+     ==================================================================== */
+  
+
+
+   /* ====================================================================
+     Homepage Chat End
+     ==================================================================== */
+      .ai-quickask {
+      background-color: #f8f9fa; /* Light gray background */
+      padding: 20px; /* Adds spacing inside */
+      border-radius: 15px; /* Rounded corners */
+      border: 1px solid #ddd; /* Light border */
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow effect */
+      max-width: 500px; /* Set max width */
+      margin: auto; /* Centers the widget */
+    }
+
+
+     .predefined-buttons {
+      display: flex;
+      gap: 10px; /* Adds space between buttons */
+      justify-content: center;
+      margin-top: 10px;
+    }
+    
+    .predefined-buttons button {
+      background-color: #2b4625; /* Primary blue */
+      color: white;
+      font-size: 16px;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: 0.3s ease-in-out;
+    }
+    
+    .predefined-buttons button:hover {
+      background-color: #436936; /* Darker shade on hover */
+    }
+    
+    .predefined-buttons button:active {
+      background-color: #b39557; 
+      color: white;
+    }
+
+    .predefined-buttons button:disabled {
+      background-color: #5c421f;
+      color: black;   
+      cursor: wait;
+    }
+
+     .ai-response {
+      margin-top: 1rem;
+      display: flex;
+      justify-content: flex-start;
+      margin-bottom: 1rem;
+    }
+
+    .loading-indicator {
+      padding: 1rem;
+      color: #020202;
+      font-size: 16px;
+      font-weight: bold;
+    }
+    
+    .chat-bubble {
+      background-color: #f4f4f8;
+      color: #000000;
+      font-size: 16px;
+      padding: 1rem;
+      border-radius: 15px;
+      max-width: 80%;
+      text-align: left;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      white-space: pre-wrap;
+      margin-top: 1rem;
+      line-height: 1.4;
+    }
+
+  /* ====================================================================
+     Homepage Chat End
+     ==================================================================== */
+
+  
+  /* ====================================================================
+     Inventory Form Styles Start
+     ==================================================================== */
+  .inventory-form {
+    margin-bottom: 20px;
+  }
+  
+  .inventory-form input {
+    margin-right: 10px;
+    padding: 5px;
+    font-size: 18px;
+  }
+  
+  .inventory-form button {
+    padding: 5px 15px;
+    font-size: 18px;
+  }
+  /* ====================================================================
+     Inventory Form Styles End
+     ==================================================================== */
+  
+  
+  /* ====================================================================
+     Inventory Table Styles Start
+     ==================================================================== */
+     .inventory-table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+      margin-top: 20px;
+    }
+    
+    .inventory-table th,
+    .inventory-table td {
+      padding: 10px;
+      border: 1px solid #ccc;
+    }
+    
+    .inventory-table th {
+      background-color: #f8f8f8;
+    }
+    
+    /* Added styles for the buttons inside the inventory table */
+    .inventory-table button {
+      font-size: 18px;           /* Larger text */
+      padding: 10px 15px;        /* Adequate padding */
+      margin: 2px;               /* Small margin between buttons */
+      background-color: #986e34;     /* Light blue background */
+      color: #ffffff;               /* Dark text for contrast */
+      border: none;              /* No border */
+      border-radius: 4px;        /* Slight rounded corners */
+      cursor: pointer;
+      transition: background-color 0.2s ease-in-out;
+    }
+    
+    .inventory-table button:hover {
+      background-color: #5c421f;     /* Slightly darker blue on hover */ /* Slightly darker on hover */
+    }
+
+    /* Ensure input fields have the same font size as table text */
+    .inventory-table input {
+      font-size: 18px; /* Same font size as the button */
+      padding: 8px 12px; /* Adjust padding to match button style */
+      width: 100%; /* Make inputs take up full width inside the table cells */
+      box-sizing: border-box; /* Ensure padding doesn't cause overflow */
+    }
+
+    .bottom-spacer {
+      background-color: #ffffff;
+      border-top: 1px solid #ccc;
+    }
+
+  /* ====================================================================
+     Inventory Table Styles End
+     ==================================================================== */
+
+
+      
+  /* ====================================================================
+    Category Filter Styles Start
+    ==================================================================== */
+  .category-filter {
+    margin: 20px 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 18px;
+  }
+
+  .category-filter label {
+    font-weight: bold;
+    color: #083d56;
+    font-size: 18px;
+  }
+
+  .category-filter select {
+    font-size: 18px;
+    padding: 8px 12px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    color: #083d56;
+    box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+  }
+
+  .category-filter button {
+    font-size: 18px;
+    padding: 10px 15px;
+    background-color: #986e34;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+  }
+
+  .category-filter button:hover {
+    background-color: #5c421f;
+  }
+  /* ====================================================================
+    Category Filter Styles End
+    ==================================================================== */
+
+      
+
+     /* ====================================================================
+   Sales Table Styles Start
+   ==================================================================== */
+  .sales-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    margin-top: 20px;
+  }
+
+  .sales-table th,
+  .sales-table td {
+    padding: 10px;
+    border: 1px solid #ccc;
+  }
+
+  .sales-table th {
+    background-color: #f8f8f8;
+  }
+
+  /* Added styles for buttons inside the sales table */
+  .sales-table button {
+    font-size: 18px;               /* Larger text */
+    padding: 10px 15px;            /* Adequate padding */
+    margin: 2px;                   /* Small margin between buttons */
+    background-color: #436936;     /* Light blue background */
+    color: #ffffff;                /* Darker blue text */
+    border: none;                  /* No border */
+    border-radius: 4px;            /* Slight rounded corners */
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+  }
+
+  .sales-table button:hover {
+    background-color: #2b4625;     /* Darker blue on hover */
+  }
+
+  /* Ensure input fields (bulk sale quantity inputs) have the same font size as buttons */
+  .sales-table input {
+    font-size: 18px; /* Same font size as the button */
+    padding: 8px 12px; /* Adjust padding to match button style */
+    width: 100%; /* Make inputs take up full width inside the table cells */
+    box-sizing: border-box; /* Ensure padding doesn't cause overflow */
+  }
+
+  .bottom-sales {
+    background-color: #ffffff;
+    border-top: 1px solid #ccc;
+  }
+
+/* ====================================================================
+   Sales Table Styles End
+   ==================================================================== */
+
+
+
+/* ====================================================================
+   Upgrade Page Styles Start
+   ==================================================================== */
+
+   .upgrade-page {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px;
+    background-color: #ffffff; /* White background */
+    text-align: center;
+  }
+  
+  /* Global typography */
+  .upgrade-heading,
+  .plan-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333333; /* Dark grey */
+    margin-bottom: 20px;
+  }
+  
+  .upgrade-text,
+  .plan-items,
+  .plan-description,
+  .plan-support {
+    font-size: 1.2rem;
+    color: #666666; /* Medium grey */
+    margin-bottom: 15px;
+  }
+  
+  /* Plans Container */
+  .plans-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  /* Individual Plan Banner */
+  .plan-banner {
+    padding: 20px;
+    background-color: #f8f8f8; /* Light grey */
+    border: 1px solid #ccc; /* Slight border for separation */
+    border-radius: 8px;
+  }
+  
+  /* Contact link styling */
+  .plan-support span {
+    font-weight: bold;
+    color: #000000; /* Black */
+  }
+  
+  /* ====================================================================
+     Upgrade Page Styles End
+     ==================================================================== */
+
+
+
+  /* ====================================================================
+     Mobile Optimization Styles Start
+     ==================================================================== */
+  @media only screen and (max-width: 600px) {
+    /* Global adjustments for mobile */
+    body {
+      margin: 10px;
+      font-size: 16px;
+    }
+    
+    .app-container {
+      max-width: 100%;
+      padding: 0 10px;
+    }
+    
+    /* Navigation adjustments: stack links vertically */
+    nav {
+      margin-bottom: 15px;
+    }
+    
+    nav a {
+      display: block;
+      margin: 10px 0;
+    }
+    
+    /* Headings adjustments for mobile screens */
+    h1, h2 {
+      font-size: 1.5em;
+    }
+    
+    /* Homepage Specific Adjustments for Mobile */
+    .homepage {
+      padding: 1rem;
+    }
+    
+    .homepage h1 {
+      font-size: 2rem;
+    }
+    
+    .homepage p {
+      font-size: 1rem;
+    }
+
+
+    /* AI chat pre def buttons */
+      .predefined-buttons {
+        display: flex;
+        flex-direction: column; /* Stack buttons vertically */
+        gap: 5px;             /* Smaller gap between buttons */
+        margin-top: 10px;
+        padding: 10px;        /* Optional padding around the group */
+        align-items: stretch; /* Ensure buttons take full width */
+      }
+      
+      .predefined-buttons button {
+        width: 100%;          /* Occupy the full container width */
+        box-sizing: border-box; /* Prevent padding from overflowing */
+        font-size: 16px;      /* Maintain the same font size */
+        padding: 10px 15px;   /* Same padding as PC view */
+      }
+    
+    /* Inventory Form adjustments: stack input and button */
+    .inventory-form {
+      margin-bottom: 15px;
+    }
+    
+    .inventory-form input,
+    .inventory-form button {
+      display: block;
+      width: 100%;
+      margin: 5px 0;
+      font-size: 16px;
+    }
+    
+    /* Inventory Table: allow horizontal scrolling if needed */
+    .inventory-table {
+      display: block;
+      overflow-x: auto;
+      border-collapse: collapse; 
+    }
+
+    .inventory-table th,
+    .inventory-table td {
+      padding: 3px;              /* Adjust this value as needed */
+      text-align: center;        /* Centers text horizontally */
+      vertical-align: middle;  
+    }
+
+    .inventory-table button {
+      box-sizing: border-box; 
+      font-size: 16px; /* Set font size to 16px */
+      padding: 8px 10px;
+      margin: 1px; /* Reduce spacing between buttons */
+      background-color: #986e34;
+      color: #ffffff;
+      border: none;
+      border-radius: 4px;
+      display: inline-block; /* Align input fields side by side */
+      vertical-align: middle;
+      cursor: pointer;
+      transition: background-color 0.2s ease-in-out;
+    }
+
+    .inventory-table td.action-cell {
+      display: flex;
+      flex-direction: row;       /* Align buttons in a row */
+      align-items: center;       /* Vertically center the buttons */
+      gap: 5px;                  /* Small gap between the buttons */
+    }  
+    
+    .inventory-table button:hover {
+      background-color: #5c421f;
+    }
+    
+    /* Optimize input fields for horizontal alignment */
+    .inventory-table input {
+      font-size: 16px;
+      padding: 6px 8px;
+      width: auto; /* Allow input fields to fit horizontally */
+      box-sizing: border-box;
+      display: inline-block; /* Align input fields side by side */
+      vertical-align: middle;
+      margin-right: 5px; /* Reduce space between inputs */
+      max-width: 100px;
+    }
+    
+    /* Make table scroll horizontally on small screens */
+    .sales-table-wrapper {
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch; /* smooth scrolling for iOS */
+      width: 100%;
+    }
+
+    /* Keep table from shrinking too small */
+    .sales-table {
+      min-width: 800px; /* Adjust depending on column width */
+      border-collapse: collapse;
+      width: 100%;
+      margin: auto; 
+    }
+
+    /* Optional: Adjust text/padding on smaller screens */
+ 
+      .sales-table th, 
+      .sales-table td {
+        font-size: 16px;  /* Reduced text size for mobile viewing */
+        padding: 3px;     /* Reduced padding to see more cells on-screen */
+        text-align: center;        /* Centers content horizontally */
+        vertical-align: middle;
+      }
+
+      .sales-table td.quantity-cell {
+        display: flex;            /* Enable flexbox */
+        align-items: center;      /* Align items vertically in center */
+        justify-content: space-between; /* Ensure space is distributed */
+        gap: 5px;                 /* Space between input and button */
+      }
+    
+      /* Force both input and button to be inline so they stay on the same row */
+  
+      .sales-table button {
+        box-sizing: border-box;
+        font-size: 16px;   /* Adjust button text size for mobile */
+        padding: 8px 12px; /* Reduce button padding */
+        margin: 1px;       /* Reduce margin between buttons */
+      }
+
+      .sales-table input {
+        font-size: 16px;   /* Adjust input text size for mobile */
+        padding: 6px 8px;  /* Reduce padding */
+        margin-right: 5px; /* Space between input and button */
+        max-width: 70px;
+        flex-shrink: 0; 
+      }
+
+      .sales-table input,
+      .sales-table button {
+        display: inline-block;
+        vertical-align: middle;
+      }
+
+      
+        .upgrade-page {
+          padding: 20px;
+        }
+      
+        .upgrade-heading,
+        .plan-title {
+          font-size: 1.8rem;
+        }
+      
+        .upgrade-text,
+        .plan-items,
+        .plan-description,
+        .plan-support {
+          font-size: 1rem;
+        }
+      
+        .plans-container {
+          gap: 15px;
+        }
+      
+        .plan-banner {
+          padding: 15px;
+        }
+
+
+   }
+      
+
+    
+    
+  
+  /* ====================================================================
+     Mobile Optimization Styles End
+     ==================================================================== */
